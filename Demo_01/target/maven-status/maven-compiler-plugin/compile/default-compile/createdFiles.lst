@@ -1,0 +1,3 @@
+com\liukai\mybatis\mappers\UserMapper.class
+com\liukai\mybatis\pojo\User.class
+com\liukai\mybatis\tests\MybatisTest.class
