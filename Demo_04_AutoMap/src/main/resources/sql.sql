@@ -18,3 +18,18 @@ select * from t_user;
 
 select * from t_user where username='lk';
 
+
+CREATE TABLE `t_emp` (
+  `eid` int NOT NULL AUTO_INCREMENT,
+  `emp_name` varchar(100) DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  `sex` char(1) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`eid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+CREATE TABLE `t_dept` (
+  `did` int NOT NULL AUTO_INCREMENT,
+  `dept_name` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`did`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

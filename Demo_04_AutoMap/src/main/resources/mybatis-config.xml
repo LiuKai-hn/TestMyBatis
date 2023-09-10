@@ -6,6 +6,15 @@
 
     <!--引入 外部配置文件 -->
     <properties resource="jdbc.properties"/>
+    
+    <settings>
+        <!--
+        将 下划线映射成驼峰 emp_name——> empName
+        -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 配置延迟加载 ，按需查询相应属性-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
 
     <!-- 设置类型别名
     用于在 UserMapper.xml 中替换 较长的全类名(返回类型)
