@@ -30,4 +30,13 @@ public interface EmpMapper {
      * @return
      */
     Emp getEmpByStepOne(@Param("eid") int eid);
+
+
+    /**
+     * 通过分步查询部门及部门所有员工信息
+     * 分步查询第二步：根据did查询员工信息
+     */
+    List<Emp> getDeptAndEmpByStepTwo(@Param("did")Integer did);
+
+
 }

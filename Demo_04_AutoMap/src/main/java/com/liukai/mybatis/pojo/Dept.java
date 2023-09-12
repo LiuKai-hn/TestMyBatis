@@ -2,6 +2,7 @@ package com.liukai.mybatis.pojo;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Dept {
+public class Dept implements Serializable {
 
     private Integer did;
     private String deptName;

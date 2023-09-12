@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--引入 外部配置文件 -->
+    <properties resource="jdbc.properties"/>
+    
+    <settings>
+        <!--
+        将 下划线映射成驼峰 emp_name——> empName
+        -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 配置延迟加载 ，按需查询相应属性-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
+
+    <!-- 设置类型别名
+    用于在 UserMapper.xml 中替换 较长的全类名(返回类型)
+    alias 不写的情况下为全类名的最后一个即User
+    alias 不区分大小写，可以随意写 aaa bb
+    -->
+
+    <typeAliases>
+        <!--<typeAlias type="com.liukai.mybatis.pojo.User" alias="User"/>-->
+        <!--
+        以包为单位，将包下所有的类型设置为默认类型别名：即类名且不区分大小写
+        -->
+        <package name="com.liukai.mybatis.pojo"/>
+
+    </typeAliases>
+
+    <!--设置连接数据库的环境-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url"
+                          value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--引入映射文件
+     如果接口比较多，那么Mapper.xml 也随之多了起来
+     可以直接引入路径，将该路径下所有的Mapper.xml 都扫描进来
+    -->
+    <mappers>
+        <!--<mapper resource="mappers/UserMapper.xml"/>-->
+        <!--
+        以包为单位引入映射文件，需要两个要求
+        1、mapper接口所在的包和映射文件所在的路径应保持一致
+        2、mapper接口要和映射文件名称保持一致
+        -->
+        <package name="com.liukai.mybatis.mappers"/>
+    </mappers>
+</configuration>

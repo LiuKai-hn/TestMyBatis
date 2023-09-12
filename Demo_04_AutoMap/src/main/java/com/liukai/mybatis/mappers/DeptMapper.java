@@ -20,4 +20,10 @@ public interface DeptMapper {
      */
     Dept getDeptAndEmps(@Param("did")Integer did);
 
+    /**
+     * 通过分步查询部门及部门所有员工信息
+     * 分步查询第一步：查询部门信息
+     */
+    Dept getDeptAndEmpByStepOne(@Param("did")Integer did);
+
 }

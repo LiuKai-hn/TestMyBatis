@@ -2,6 +2,8 @@ package com.liukai.mybatis.pojo;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * @author liukai
  * @version 1.0
@@ -12,7 +14,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Emp {
+public class Emp implements Serializable {
 
     private Integer eid;
     private String empName;

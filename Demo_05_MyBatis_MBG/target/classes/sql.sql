@@ -41,11 +41,11 @@ INSERT INTO mybatis.t_dept (did, dept_name) VALUES (1, 'A');
 INSERT INTO mybatis.t_dept (did, dept_name) VALUES (2, 'B');
 INSERT INTO mybatis.t_dept (did, dept_name) VALUES (3, 'C');
 
-INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (1, 'zs', 25, '男', '110@qq.com', 1);
-INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (2, 'ls', 26, '女', '120@qq.com', 2);
-INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (3, 'ww', 25, '男', '120@qq.com', 3);
-INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (4, 'zl', 26, '女', '120@qq.com', 1);
-INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (5, 'tq', 28, '男', '120@qq.com', 2);
+INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (null, 'zs', 25, '男', '110@qq.com', 1);
+INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (null, 'ls', 26, '女', '120@qq.com', 2);
+INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (null, 'ww', 25, '男', '120@qq.com', 3);
+INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (null, 'zl', 26, '女', '120@qq.com', 1);
+INSERT INTO mybatis.t_emp (eid, emp_name, age, sex, email, did) VALUES (null, 'tq', 28, '男', '120@qq.com', 2);
 
 
 select * from t_dept left join t_emp on t_dept.did=t_emp.did;

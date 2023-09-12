@@ -13,6 +13,7 @@
         <module>Demo_02</module>
         <module>Demo_03_canshu</module>
         <module>Demo_04_AutoMap</module>
+        <module>Demo_05_MyBatis_MBG</module>
     </modules>
 
     <dependencies>
@@ -55,6 +56,18 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.7.2</version>
+        </dependency>
+        <!-- Mybatis EHCache整合包 -->
+        <dependency>
+            <groupId>org.mybatis.caches</groupId>
+            <artifactId>mybatis-ehcache</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!-- slf4j日志门面的一个具体实现 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
         </dependency>
     </dependencies>
 </project>
